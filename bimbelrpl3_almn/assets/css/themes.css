@@ -1,0 +1,84 @@
+/* --- TEMA DEFAULT (LIGHT MODE) --- */
+:root {
+    --bg-main: #f8f9fa;        /* Background halaman putih abu */
+    --bg-card: #ffffff;        /* Background card putih bersih */
+    --text-main: #212529;      /* Teks hitam */
+    --text-muted: #6c757d;     /* Teks abu-abu */
+    --border-color: #dee2e6;
+    --table-bg: #ffffff;
+}
+
+/* --- TEMA DARK MODE --- */
+[data-theme="dark"] {
+    --bg-main: #0f172a;        /* Navy sangat gelap */
+    --bg-card: #1e293b;        /* Navy sedang untuk card */
+    --text-main: #f8fafc;      /* Teks jadi putih */
+    --text-muted: #94a3b8;     /* Teks muted jadi abu terang */
+    --border-color: #334155;
+    --table-bg: #1e293b;
+}
+
+/* --- PENERAPAN GLOBAL --- */
+body {
+    background-color: var(--bg-main) !important;
+    color: var(--text-main) !important;
+    transition: all 0.3s ease;
+}
+
+/* Fix Card (Dashboard Admin & Siswa) */
+.card {
+    background-color: var(--bg-card) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Fix Card Header (Bagian yang sering bocor putih) */
+.card-header {
+    background-color: rgba(0,0,0,0.03) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .card-header {
+    background-color: rgba(255,255,255,0.05) !important;
+}
+
+/* Fix Table (Masalah utama di image_88f806.png) */
+.table {
+    color: var(--text-main) !important;
+    background-color: transparent !important;
+}
+
+.table thead th {
+    background-color: var(--bg-main) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+.table td {
+    background-color: var(--bg-card) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Fix Input & Form Control */
+.form-control {
+    background-color: var(--bg-card) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+.form-control:focus {
+    background-color: var(--bg-card) !important;
+    color: var(--text-main) !important;
+}
+
+/* Fix Text Muted agar tetap terbaca */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Landing Page Hero Section Fix (image_610300.jpg) */
+[data-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+}
